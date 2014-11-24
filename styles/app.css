@@ -3,13 +3,13 @@ html, body {
 	width: 100%;
 	margin: 0px;
 	overflow: hidden;
+	font-family: Helvetica;
 }
 
 .jcc-header-section {
 	height: 80px;
-    background-color: black;
+    background-color: #232323;
     color: white;
-    text-align: center;
     padding: 5px
 }
 
@@ -26,6 +26,56 @@ html, body {
 	height: 20px;
 	padding: 10px;
     text-align: right;
-    background-color: black;
+    background-color: #232323;
     color: white;
+}
+
+.jcc-welcome-page {
+	width: 100%;
+	height: 100%;
+	background-image: url('images/welcome.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+} 
+
+.jcc-header-content {
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+}
+
+.jcc-field-container {
+	width: 50%
+	height: 100%;
+	display: inline-block;
+	margin: 20px 5px;
+}
+
+.jcc-field-container.jcc-field-container-submit {
+	position: relative;
+	top: 0px;
+}
+
+.jcc-book-icon {
+	width: 80px;
+	height: 100%;
+	background-image: url('images/book.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: inline-block;
+}
+
+.jcc-book-text {
+	width: 80px;
+	height: 100%;
+	display: inline-block;
+}
+
+.jcc-err-msg {
+	display: block;
+	font-size: 11px;
+	color: #FF0000;
+	margin-left: 85px;
 }

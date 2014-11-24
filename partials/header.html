@@ -1,0 +1,23 @@
+<div class="jcc-header-content">
+	<div class="jcc-book-icon">&nbsp;</div>
+	<div class="jcc-book-text">Mean Book</div>
+</div>
+
+<form name="login" class="jcc-header-content">
+	<div class="jcc-field-container">
+		Username:
+		<input type="text" name="username" onkeyup="Login.clearInvalid()"/>
+		<label class="jcc-err-msg" id="userErrorMsg" hidden></label>
+	</div>
+
+	<div class="jcc-field-container">
+		Password:
+		<input type="password" name="password" onkeyup="Login.clearInvalid()"/>
+		<label class="jcc-err-msg" id="passErrorMsg" hidden></label>
+	</div>
+	
+	<div class="jcc-field-container jcc-field-container-submit">
+		<input type="button" value="Sign In" onclick="Login.onSignInClicked()"/>
+	</div>
+</form>
+
