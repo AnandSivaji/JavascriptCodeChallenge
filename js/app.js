@@ -1,10 +1,10 @@
 (function(){
 	
 	ModuleLoader.load('.jcc-header-section', './partials/header.html');
-	ModuleLoader.load('.jcc-content-section', './partials/Welcome.html');
+	ModuleLoader.load('.jcc-content-section', './partials/login.html');
 })();
 
-var Login = (function(){
+var Login = (function() {
 	
 	var username = 'anandsivaj@gmail.com';
 	var password = 'sivaji27';
@@ -18,7 +18,16 @@ var Login = (function(){
 			var pass = this.validatePassword(loginForm.password.value);
 						
 			if (user.valid && pass.valid) {
-				return alert("Login success");
+				
+				loginForm.style.display = "none";
+				
+				var loggedUser = document.forms['loggedUser'];
+				
+				loggedUser.style.display = "inline-block";
+				document.getElementsByClassName("jcc-logged-ser-text")[0].innerHTML = loginForm.username.value;
+				
+				ModuleLoader.load('.jcc-content-section', './partials/home.html');
+				return null;
 			} 
 			
 			if (!user.valid) {
@@ -32,6 +41,20 @@ var Login = (function(){
 				passError.innerHTML = pass.msg;
 				passError.hidden = !pass.valid;
 			}
+		},
+		
+		onSignOutClicked: function() {
+			
+			var loggedUser = document.forms['loggedUser'],
+				loginForm = document.forms['login'];
+				
+			loggedUser.style.display = "none";
+			
+			loginForm.style.display = "inline-block";
+			loginForm.username.value = "";
+			loginForm.password.value = "";
+			
+			ModuleLoader.load('.jcc-content-section', './partials/login.html');
 		},
 		
 		validateUsername: function(user) {

@@ -1,23 +1,32 @@
-<div class="jcc-header-content">
-	<div class="jcc-book-icon">&nbsp;</div>
+<div class="jcc-header-content jcc-book-icon">
 	<div class="jcc-book-text">Mean Book</div>
 </div>
 
-<form name="login" class="jcc-header-content">
+<form name="login" class="jcc-header-content jcc-login-user">
 	<div class="jcc-field-container">
 		Username:
-		<input type="text" name="username" onkeyup="Login.clearInvalid()"/>
+		<input type="text" name="username" onkeyup="Login.clearInvalid()" value="anandsivaj@gmail.com"/>
 		<label class="jcc-err-msg" id="userErrorMsg" hidden></label>
 	</div>
 
 	<div class="jcc-field-container">
 		Password:
-		<input type="password" name="password" onkeyup="Login.clearInvalid()"/>
+		<input type="password" name="password" onkeyup="Login.clearInvalid()" value="sivaji27"/>
 		<label class="jcc-err-msg" id="passErrorMsg" hidden></label>
 	</div>
 	
 	<div class="jcc-field-container jcc-field-container-submit">
 		<input type="button" value="Sign In" onclick="Login.onSignInClicked()"/>
+	</div>
+</form>
+
+<form name="loggedUser" class="jcc-header-content jcc-logged-user-content">
+	<div class="jcc-field-container">
+		<span class="jcc-logged-ser-text"></span>
+	</div>
+	
+	<div class="jcc-field-container jcc-field-container-submit">
+		<input type="button" value="Sign Out" onclick="Login.onSignOutClicked()"/>
 	</div>
 </form>
 
