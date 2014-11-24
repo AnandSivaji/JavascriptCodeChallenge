@@ -1,0 +1,31 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.jcc-header-section {
+	height: 80px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px
+}
+
+.jcc-content-section {
+    width: 100%;
+    height: calc(100% - 130px);
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.jcc-footer-section {
+	
+	height: 20px;
+	padding: 10px;
+    text-align: right;
+    background-color: black;
+    color: white;
+}
